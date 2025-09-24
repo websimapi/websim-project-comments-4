@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Comments</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "marked": "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js",
+          "dompurify": "https://cdn.jsdelivr.net/npm/dompurify/dist/purify.es.min.js"
+        }
+      }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Comments</h1>
+            <p id="project-title"></p>
+        </header>
+
+        <main>
+            <div id="comment-form-container">
+                <form id="comment-form">
+                    <img id="current-user-avatar" src="" alt="Your avatar" class="avatar">
+                    <div class="form-content">
+                        <textarea id="comment-input" placeholder="Add a comment..." required></textarea>
+                        <div id="image-preview-container"></div>
+                        <div class="form-actions">
+                            <label for="image-upload" class="image-upload-button">
+                                <img src="image_icon.png" alt="Upload Image">
+                            </label>
+                            <input type="file" id="image-upload" accept="image/*" multiple style="display: none;">
+                            <button type="submit">Post</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="comments-container">
+                <div id="loading">Loading comments...</div>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
